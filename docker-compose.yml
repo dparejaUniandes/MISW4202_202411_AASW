@@ -9,15 +9,11 @@ services:
   parametros-salud:
     build: ./parametros-salud
     container_name: parametros-salud
-    ports:
-      - 5002:5000
     volumes:
       - ./parametros-salud:/app
   monitor:
     build: ./monitor
     container_name: monitor
-    ports:
-      - 5001:5000
     volumes:
       - ./monitor:/app/
   api-gateway:
