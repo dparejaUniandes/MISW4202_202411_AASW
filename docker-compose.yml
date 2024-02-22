@@ -1,0 +1,32 @@
+version: "3.2"
+
+services:
+  redis:
+    image: redis:alpine
+    container_name: broker
+    ports:
+      - 6379:6379
+  parametros-salud:
+    build: ./parametros-salud
+    container_name: parametros-salud
+    ports:
+      - 5002:5000
+    volumes:
+      - ./parametros-salud:/app
+  monitor:
+    build: ./monitor
+    container_name: monitor
+    ports:
+      - 5001:5000
+    volumes:
+      - ./monitor:/app/
+  api-gateway:
+    image: nginx:latest
+    container_name: api-gateway
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/nginx-proxy.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - parametros-salud
+      - monitor
