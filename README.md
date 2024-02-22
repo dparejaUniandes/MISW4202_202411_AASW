@@ -5,3 +5,5 @@ Repositorio para el 3er ciclo de MISO para la materia Arquitecturas ágiles de s
 ## inicializar el projecto
 
 `docker-compose up` o `docker compose up`
+
+Cuando se agregan o rremueven librerias: `docker compose up --build --force-recreate`
