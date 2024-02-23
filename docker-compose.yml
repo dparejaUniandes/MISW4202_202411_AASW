@@ -13,6 +13,8 @@ services:
       - ./parametros-salud:/app
     networks:
       - sport-app-network
+    depends_on: 
+      - redis
   monitor:
     build: ./monitor
     container_name: monitor
@@ -20,6 +22,8 @@ services:
       - ./monitor:/app
     networks:
       - sport-app-network
+    depends_on: 
+      - redis
   api-gateway:
     image: nginx:latest
     container_name: api-gateway
