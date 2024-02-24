@@ -2,6 +2,8 @@ from datetime import datetime, timezone, timedelta
 from app import *
 import threading
 import time
+import requests
+import json
 
 def watch_dock(app):
     inicio = time.time()
@@ -27,13 +29,21 @@ def run_thread(candado, app):
         thread.start()
         print("hilo iniciado")
 
-def monitor_heartbeat(data):
+def monitor_heartbeat(data_info):
     print("monitor_heartbeat *** ")
-    nuevo_registro = Monitor(numeroPrueba=data['numeroPrueba'],\
-                            duracionDeteccion=data['duracionDeteccion'],\
-                            fechaCreacion=datetime.now(timezone(timedelta(hours=-5), 'CT')))
-    db.session.add(nuevo_registro)
-    db.session.commit()
+    data_json={"numeroPrueba": data_info['numeroPrueba'],"duracionDeteccion":data_info['duracionDeteccion'],"candado": data_info['candado']}
+    headers = {'content-type': 'application/json'}
+    content = requests.post('http://172.21.0.5:5000', headers=headers,
+                            json=data_json)
+    if content.status_code != 200:
+        print ("Error:", content.status_code)
+    else:
+        monitor_log = content.json()
+        print(json.dumps(monitor_log))
+    print("Mensaje recibido en monitor_heartbeat")
+    
+    # db.session.add(nuevo_registro)
+    # db.session.commit()
     # print(monitor_schema.dump(nuevo_registro))
-    run_thread(data['candado'], app)
-    print([monitor_schema.dump(monitor) for monitor in Monitor.query.all()])
+    # run_thread(data['candado'], app)
+    # print([monitor_schema.dump(monitor) for monitor in Monitor.query.all()])

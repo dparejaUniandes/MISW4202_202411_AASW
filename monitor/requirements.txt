@@ -4,3 +4,4 @@ flask-sqlalchemy
 marshmallow_sqlalchemy
 redis
 rq
+requests

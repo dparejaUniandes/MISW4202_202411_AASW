@@ -24,7 +24,7 @@ services:
       - sport-app-network
     depends_on: 
       - redis
-    command: sh run_queries.sh
+    command: sh run_apis.sh
   worker-monitor:
     build: ./monitor
     container_name: worker-monitor

@@ -33,8 +33,9 @@ def run_thread(candado, app, queue):
 
 
 
-@app.route("/", methods=('POST',))
+@app.route("/monitor", methods=('POST',))
 def hello_world():
+    print("Guardar Log")
     nuevo_registro = Monitor(numeroPrueba=request.json['numeroPrueba'],\
                             duracionDeteccion=request.json['duracionDeteccion'],\
                             fechaCreacion=datetime.now(timezone(timedelta(hours=-5), 'CT')),\
