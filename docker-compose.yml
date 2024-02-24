@@ -24,6 +24,7 @@ services:
       - sport-app-network
     depends_on: 
       - redis
+    command: rq worker -u 'redis://redis/0'
   api-gateway:
     image: nginx:latest
     container_name: api-gateway
