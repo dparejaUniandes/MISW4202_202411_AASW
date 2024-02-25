@@ -15,7 +15,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    logging.info("iniciando el hilo de recepción de heartbeat")
     start_heartbeat_thread()
     return "<p>Hello, World! from monitor, trabajando de forma correcta</p>"
 
@@ -23,7 +22,6 @@ def recibir_heartbeat():
     # Suscribe al cliente de Redis a la clave 'heartbeat'
     pubsub = redis_client.pubsub()
     pubsub.subscribe('heartbeat')
-    logging.info("Se ha realizado la suscripción a la cola de mensajes")
     timestamp_anterior = None
     # Escucha continuamente las señales de heartbeat
     for mensaje in pubsub.listen():
@@ -32,8 +30,8 @@ def recibir_heartbeat():
             timestamp_actual = datetime.now()
             if timestamp_anterior is not None:
                 dif_time = (timestamp_actual - timestamp_anterior).total_seconds() * 1000
-                if dif_time > 300:
-                    logging.info("Se ha perdido la recepción de heartbeat")
+                if dif_time > 500:
+                    logging.info("Falla detectada")
                 else:
                     # Registra la fecha y hora de la recepción en el log
                     fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
