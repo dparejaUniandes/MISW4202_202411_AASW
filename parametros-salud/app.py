@@ -1,10 +1,11 @@
 import logging
 from flask import Flask, request, jsonify
-import redis
+from celery import Celery
 import time
 import threading
 import random
 from datetime import datetime
+from cola_mensajes import registrar_beat
 
 # Configura el registro de Flask para que no se escriba en el mismo archivo
 werkzeug_logger = logging.getLogger('werkzeug')
@@ -12,7 +13,6 @@ werkzeug_logger.setLevel(logging.ERROR)
 
 # Configura el registro principal para las señales "alive"
 logging.basicConfig(filename='heartbeat.log', level=logging.INFO)
-redis_client = redis.StrictRedis(host='redis', port=6379, db=0)
 app = Flask(__name__)
 
 # Ruta para ejecutar logíca de monitoreo de parametros de salud
@@ -31,9 +31,11 @@ def enviar_señales_alive(duracion_experimento, porcentaje_falla):
         fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
         # Guarda la señal de "alive" en el log con la fecha y hora actual
         logging.info(f'Señal de alive enviada a la cola en {fecha_hora_actual}')
-        # Se publica mensaje en cola de Redis
-        redis_client.publish('heartbeat', fecha_hora_actual)
+
+        # Se publica mensaje en cola de mensajes
+        registrar_beat.apply_async(args=[{"fechaCreacion": fecha_hora_actual},],)
         time.sleep(0.1)
+
     fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
     logging.info(f'Se finaliza experimento {fecha_hora_actual}')
 
@@ -47,9 +49,9 @@ def start_heartbeat_thread(duracion_experimento, porcentaje_falla):
 def iniciar_experimento():
     fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
     logging.info(f'Se inicia experimento {fecha_hora_actual}')
-    duracion_experimento = request.json.get("duracion_experimento", 100)  # Duración predeterminada de 100 segundos
+    duracion_experimento = request.json.get("duracion_experimento", 5)  # Duración predeterminada de 100 segundos
     porcentaje_falla = request.json.get("porcentaje_falla", 5)  # Porcentaje de falla predeterminado de 5%
-    start_heartbeat_thread(duracion_experimento, porcentaje_falla)
+    enviar_señales_alive(duracion_experimento, porcentaje_falla)
     return jsonify({"mensaje": "Experimento iniciado correctamente"})
 
 if __name__ == "__main__":

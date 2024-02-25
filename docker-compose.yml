@@ -14,6 +14,8 @@ services:
       - ./parametros-salud:/app
     networks:
       - sport-app-network
+    depends_on:
+      - redis
 
   monitor:
     build: ./monitor
@@ -22,6 +24,9 @@ services:
       - ./monitor:/app
     networks:
       - sport-app-network
+    depends_on:
+      - redis
+    command: celery -A tarea worker -l info
 
   api-gateway:
     image: nginx:latest
