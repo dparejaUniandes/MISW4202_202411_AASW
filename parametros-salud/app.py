@@ -20,12 +20,12 @@ app = Flask(__name__)
 def hello_world():
     return "<p>Dato de salud recibido</p>"
 
-def enviar_señales_alive(duracion_experimento):
+def enviar_señales_alive(duracion_experimento, porcentaje_falla):
     inicio_experimento = time.time()
     while time.time() - inicio_experimento < duracion_experimento:
-        if random.random() < 0.05:  # Probabilidad de falla de x%
+        if random.random() < porcentaje_falla / 100:  # Probabilidad de falla
             logging.info("Simulando falla en el envío de señales de monitoreo")
-            time.sleep(0.5)  # Simula una falla de x segundos
+            time.sleep(0.5)  # Simula una falla de 0.5 segundos
             continue  # Salta al siguiente ciclo sin enviar señales
         # Obtiene la fecha y hora actual con 3 decimales de precisión
         fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
@@ -37,8 +37,8 @@ def enviar_señales_alive(duracion_experimento):
     fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
     logging.info(f'Se finaliza experimento {fecha_hora_actual}')
 
-def start_heartbeat_thread(duracion_experimento):
-    heartbeat_thread = threading.Thread(target=enviar_señales_alive, args=(duracion_experimento,))
+def start_heartbeat_thread(duracion_experimento, porcentaje_falla):
+    heartbeat_thread = threading.Thread(target=enviar_señales_alive, args=(duracion_experimento, porcentaje_falla,))
     heartbeat_thread.start()
 
 
@@ -48,7 +48,8 @@ def iniciar_experimento():
     fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
     logging.info(f'Se inicia experimento {fecha_hora_actual}')
     duracion_experimento = request.json.get("duracion_experimento", 100)  # Duración predeterminada de 100 segundos
-    start_heartbeat_thread(duracion_experimento)
+    porcentaje_falla = request.json.get("porcentaje_falla", 5)  # Porcentaje de falla predeterminado de 5%
+    start_heartbeat_thread(duracion_experimento, porcentaje_falla)
     return jsonify({"mensaje": "Experimento iniciado correctamente"})
 
 if __name__ == "__main__":

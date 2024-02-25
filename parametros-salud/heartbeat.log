@@ -1,44 +1,77 @@
-INFO:root:Se inicia experimento 2024-02-25 14:43:45.133
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:45.134
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:45.236
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:45.337
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:45.438
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:45.539
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:45.640
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:45.740
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:45.841
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:45.942
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:46.043
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:46.144
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:46.244
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:46.345
+INFO:root:Se inicia experimento 2024-02-25 15:08:48.594
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:48.595
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:48.697
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:48.798
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:48.899
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:49.000
 INFO:root:Simulando falla en el envío de señales de monitoreo
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:46.946
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:49.601
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:49.702
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:49.802
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:49.904
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:50.004
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:50.105
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:50.206
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:50.307
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:50.407
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:50.508
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:50.609
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:50.710
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:50.810
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:50.913
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:51.013
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:51.114
 INFO:root:Simulando falla en el envío de señales de monitoreo
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:47.547
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:47.648
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:47.748
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:47.849
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:47.950
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:48.052
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:48.153
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:48.254
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:48.355
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:48.456
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:48.557
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:48.658
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:48.759
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:48.860
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:48.961
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:49.062
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:49.163
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:49.264
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:49.364
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:49.465
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:49.566
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:49.666
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:49.767
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:49.868
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:49.968
-INFO:root:Señal de alive enviada a la cola en 2024-02-25 14:43:50.069
-INFO:root:Se finaliza experimento 2024-02-25 14:43:50.171
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:51.715
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:51.816
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:51.917
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:52.018
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:52.120
+INFO:root:Simulando falla en el envío de señales de monitoreo
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:52.721
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:52.821
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:52.922
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:53.023
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:53.124
+INFO:root:Simulando falla en el envío de señales de monitoreo
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:53.725
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:53.825
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:53.926
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:54.027
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:54.127
+INFO:root:Simulando falla en el envío de señales de monitoreo
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:54.728
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:54.829
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:54.930
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:55.030
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:55.131
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:55.232
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:55.333
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:55.433
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:55.534
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:55.635
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:55.735
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:55.836
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:55.937
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:56.037
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:56.138
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:56.239
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:56.340
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:56.441
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:56.541
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:56.642
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:56.743
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:56.844
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:56.944
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:57.045
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:57.146
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:57.246
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:57.347
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:57.448
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:57.549
+INFO:root:Simulando falla en el envío de señales de monitoreo
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:58.150
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:58.250
+INFO:root:Señal de alive enviada a la cola en 2024-02-25 15:08:58.351
+INFO:root:Simulando falla en el envío de señales de monitoreo
+INFO:root:Se finaliza experimento 2024-02-25 15:08:58.952
