@@ -33,7 +33,7 @@ def run_thread(candado, app, queue):
 
 
 
-@app.route("/monitor", methods=('POST',))
+@app.route("/", methods=('POST',))
 def hello_world():
     print("Guardar Log")
     nuevo_registro = Monitor(numeroPrueba=request.json['numeroPrueba'],\

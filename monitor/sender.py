@@ -33,7 +33,7 @@ def monitor_heartbeat(data_info):
     print("monitor_heartbeat *** ")
     data_json={"numeroPrueba": data_info['numeroPrueba'],"duracionDeteccion":data_info['duracionDeteccion'],"candado": data_info['candado']}
     headers = {'content-type': 'application/json'}
-    content = requests.post('http://172.21.0.5:5000', headers=headers,
+    content = requests.post('http://operations-monitor:5000', headers=headers,
                             json=data_json)
     if content.status_code != 200:
         print ("Error:", content.status_code)
