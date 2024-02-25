@@ -6,21 +6,18 @@ import threading
 import random
 from datetime import datetime
 
-# # Configura el registro de Flask para que no se escriba en el mismo archivo
-# werkzeug_logger = logging.getLogger('werkzeug')
-# werkzeug_logger.setLevel(logging.ERROR)
+# Configura el registro de Flask para que no se escriba en el mismo archivo
+werkzeug_logger = logging.getLogger('werkzeug')
+werkzeug_logger.setLevel(logging.ERROR)
 
 # Configura el registro principal para las señales "alive"
 logging.basicConfig(filename='heartbeat.log', level=logging.INFO)
 redis_client = redis.StrictRedis(host='redis', port=6379, db=0)
 app = Flask(__name__)
 
-
 # Ruta para ejecutar logíca de monitoreo de parametros de salud
 @app.route("/")
 def hello_world():
-    fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
-    redis_client.publish('heartbeat', fecha_hora_actual)
     return "<p>Dato de salud recibido</p>"
 
 def enviar_señales_alive(duracion_experimento):

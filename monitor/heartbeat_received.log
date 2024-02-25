@@ -1,214 +1,41 @@
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 144-484-808
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:15:41] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 144-484-808
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:18:56] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 144-484-808
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 144-484-808
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 144-484-808
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 144-484-808
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 144-484-808
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 144-484-808
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 144-484-808
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:root:Señal de alive enviada a la hora: 2024-02-24 06:46:04.022
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 357-109-275
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:50:07] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:50:08] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 357-109-275
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 357-109-275
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:52:53] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 357-109-275
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 357-109-275
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 357-109-275
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:54:57] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:55:02] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:55:04] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 357-109-275
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 357-109-275
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:56:03] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:56:07] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:56:12] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:56:14] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:56:17] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:56:19] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 357-109-275
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:56:47] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 357-109-275
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://172.20.0.3:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 798-423-482
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 06:59:25] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 798-423-482
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 798-423-482
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 798-423-482
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 07:00:58] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 798-423-482
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 07:01:30] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 07:01:35] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 07:01:37] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 07:01:40] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 798-423-482
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 07:01:53] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 798-423-482
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 07:02:53] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 07:02:55] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [24/Feb/2024 07:02:56] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://172.20.0.2:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug:172.20.0.5 - - [25/Feb/2024 13:35:08] "GET / HTTP/1.0" 200 -
-INFO:werkzeug:172.20.0.5 - - [25/Feb/2024 13:35:33] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug:172.20.0.5 - - [25/Feb/2024 13:36:19] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug:172.20.0.5 - - [25/Feb/2024 13:36:27] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug:172.20.0.5 - - [25/Feb/2024 13:36:59] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug:172.20.0.5 - - [25/Feb/2024 13:39:51] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:root:Iniciando servicio de recepción de señales de heartbeat
-INFO:werkzeug:172.20.0.5 - - [25/Feb/2024 13:40:27] "GET / HTTP/1.0" 200 -
-INFO:root:Iniciando servicio de recepción de señales de heartbeat
-INFO:werkzeug:172.20.0.5 - - [25/Feb/2024 13:40:29] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:root:Iniciando servicio de recepción de señales de heartbeat
-INFO:werkzeug:172.20.0.5 - - [25/Feb/2024 13:43:10] "GET / HTTP/1.0" 200 -
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://172.20.0.2:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug: * Detected change in '/app/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 104-731-982
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://172.20.0.4:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 138-895-469
+INFO:root:iniciando el hilo de recepción de heartbeat
+INFO:root:Se ha realizado la suscripción a la cola de mensajes
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:45.236
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:45.338
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:45.439
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:45.540
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:45.640
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:45.741
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:45.842
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:45.943
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:46.044
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:46.144
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:46.245
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:46.345
+INFO:root:Se ha perdido la recepción de heartbeat
+INFO:root:Se ha perdido la recepción de heartbeat
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:47.648
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:47.749
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:47.850
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:47.951
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:48.053
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:48.154
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:48.255
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:48.355
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:48.457
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:48.557
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:48.659
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:48.760
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:48.861
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:48.962
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:49.063
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:49.164
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:49.264
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:49.365
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:49.466
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:49.566
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:49.667
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:49.768
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:49.868
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:49.969
+INFO:root:Señal de alive recibida a la hora: 2024-02-25 14:43:50.071
