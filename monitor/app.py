@@ -3,6 +3,7 @@ import redis
 import logging
 from datetime import datetime
 import threading
+import os
 
 #Configura el registro de Flask para que no se escriba en el mismo archivo
 werkzeug_logger = logging.getLogger('werkzeug')
@@ -13,8 +14,11 @@ logging.basicConfig(filename='heartbeat_received.log', level=logging.INFO)
 redis_client = redis.StrictRedis(host='redis', port=6379, db=0)
 app = Flask(__name__)
 
+log_file_path = 'heartbeat_received.log'
+
 @app.route("/")
 def hello_world():
+    limpiar_log()
     start_heartbeat_thread()
     return "<p>Hello, World! from monitor, trabajando de forma correcta</p>"
 
@@ -31,16 +35,21 @@ def recibir_heartbeat():
             if timestamp_anterior is not None:
                 dif_time = (timestamp_actual - timestamp_anterior).total_seconds() * 1000
                 if dif_time > 500:
-                    logging.info("Falla detectada")
+                    fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+                    logging.info(f"Falla detectada: {fecha_hora_actual}")
                 else:
                     # Registra la fecha y hora de la recepción en el log
                     fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
                     logging.info(f"Señal de alive recibida a la hora: {fecha_hora_actual}")
             timestamp_anterior = timestamp_actual
 
+def limpiar_log():
+    with open(log_file_path, 'w'):
+        pass
+
 def start_heartbeat_thread():
     heartbeat_thread = threading.Thread(target=recibir_heartbeat)
     heartbeat_thread.start()
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True) 
