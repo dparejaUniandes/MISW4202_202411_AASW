@@ -26,7 +26,7 @@ services:
       - sport-app-network
     depends_on:
       - redis
-    command: celery -A tarea worker -l info
+    command: sh run_app.sh
 
   api-gateway:
     image: nginx:latest
