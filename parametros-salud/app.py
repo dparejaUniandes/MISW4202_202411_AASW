@@ -13,11 +13,16 @@ def hello_world():
 
 @app.route("/", methods=('POST',))
 def beat():
-    q.enqueue(monitor_heartbeat, {
+    monitor_heartbeat.apply_async(args=({
         'numeroPrueba': request.json['numeroPrueba'],
         'duracionDeteccion': request.json['duracionDeteccion'],
         'candado': request.json['candado']
-    })
+    },))
+    # q.enqueue(monitor_heartbeat, {
+    #     'numeroPrueba': request.json['numeroPrueba'],
+    #     'duracionDeteccion': request.json['duracionDeteccion'],
+    #     'candado': request.json['candado']
+    # })
     return {
         "numeroPrueba": request.json['numeroPrueba'],
         "duracionDeteccion": request.json['duracionDeteccion']

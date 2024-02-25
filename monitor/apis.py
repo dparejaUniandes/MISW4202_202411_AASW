@@ -31,8 +31,6 @@ def run_thread(candado, app, queue):
         print("hilo iniciado")
 # hasta acá
 
-
-
 @app.route("/monitor", methods=('POST',))
 def hello_world():
     print("Guardar Log")

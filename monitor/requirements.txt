@@ -5,3 +5,4 @@ marshmallow_sqlalchemy
 redis
 rq
 requests
+celery==5.3
