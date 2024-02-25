@@ -13,28 +13,18 @@ services:
       - ./parametros-salud:/app
     networks:
       - sport-app-network
-    depends_on: 
+    depends_on:
       - redis
-  operations-monitor:
+  monitor:
     build: ./monitor
-    container_name: operations-monitor
+    container_name: monitor
     volumes:
       - ./monitor:/app
     networks:
       - sport-app-network
-    depends_on: 
+    depends_on:
       - redis
-    command: sh run_apis.sh
-  worker-monitor:
-    build: ./monitor
-    container_name: worker-monitor
-    volumes:
-      - ./monitor:/app
-    networks:
-      - sport-app-network
-    depends_on: 
-      - redis
-    command: rq worker -u 'redis://redis/0'
+    command: celery -A tarea worker -l info
   api-gateway:
     image: nginx:latest
     container_name: api-gateway
@@ -44,7 +34,7 @@ services:
       - ./nginx/nginx-proxy.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - parametros-salud
-      - operations-monitor
+      - monitor
     networks:
       - sport-app-network
 

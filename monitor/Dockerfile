@@ -22,4 +22,4 @@ ENV DEBUG=true
 EXPOSE 5000
 
 # Run the Flask application
-CMD ["flask", "run", "--debug", "--host=0.0.0.0"]
+CMD ["flask", "run", "--host=0.0.0.0", "--debug"]
