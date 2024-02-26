@@ -6,10 +6,10 @@ Repositorio para el 3er ciclo de MISO para la materia Arquitecturas ágiles de s
 
 1. Clonar el repositorio en local.
 2. Moverse a la rama `async`
-3. Ejecutar `docker compose up --build --force-recreate` para cargar los contenedores
+3. Ejecutar `docker compose up --build --force-recreate` para cargar los contenedores, en algunos computadores puede ser necesario poner un guión entre docker y compose, es decir `docker-compose up --build --force-recreate`
 4. Desde postman hacer solicitud get a url: `http://localhost/parametros-salud`, debe responder `<p>Dato de salud recibido</p>` Con este paso se verifica que el microservicio esta en ejecución.  
 ![1](https://github.com/dparejaUniandes/MISW4202_202411_AASW/assets/142282285/5012b30b-a09c-4b30-b3d6-6dacdd8b8a30)  
-5. Desde postman hacer solicitud get a url: `http://localhost/monitor`, debe responder `<p>Hello, world from monitor, trabajando de forma correcta</p>`. Con este paso se verifica que el microservicio esta en ejecución y se garantiza la suscripción del microservicio a la cola de mensajes.   
+5. Desde postman hacer solicitud get a url: `http://localhost/monitor`, debe responder `<p>Hello, world from monitor, trabajando de forma correcta</p>`. Con este paso se verifica que el microservicio esta en ejecución y se garantiza la suscripción del microservicio a la cola de mensajes. Se debe realizar la solicitud una sola vez para que exista un único suscriptor.   
 ![2](https://github.com/dparejaUniandes/MISW4202_202411_AASW/assets/142282285/1615058f-3ba6-444e-bece-3957ab8243c0)
 6. Desde postman configurar y correr un Runner para realizar solicitudes al microservicio de parametros de salud simulando una carga de trabajo normal de 30 solicitudes por segundo.
 ![7](https://github.com/dparejaUniandes/MISW4202_202411_AASW/assets/142282285/b4877431-526b-480c-934e-08bc24545fb0)  
