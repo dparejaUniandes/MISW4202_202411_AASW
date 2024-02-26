@@ -2,8 +2,6 @@
 
 Repositorio para el 3er ciclo de MISO para la materia Arquitecturas ágiles de software
 
-## inicializar el projecto
+## Experimento desarrollado está almacenado en la rama async.
 
-`docker-compose up` o `docker compose up`
-
-Cuando se agregan o rremueven librerias: `docker compose up --build --force-recreate`
+https://github.com/dparejaUniandes/MISW4202_202411_AASW/tree/async
