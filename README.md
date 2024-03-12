@@ -1,9 +1,13 @@
 # MISW4202_202411_AASW
 
-Repositorio para el 3er ciclo de MISO para la materia Arquitecturas ágiles de software
+Rama para Experimento de Validación de seguridad
 
-## Semana 5
-### Experimento 1
-El experimento está desarrollado sobre la rama async.
+## Semana 8
+### Experimento 2
 
-https://github.com/dparejaUniandes/MISW4202_202411_AASW/tree/async
+
+## inicializar el projecto
+
+`docker-compose up` o `docker compose up`
+
+Cuando se agregan o rremueven librerias: `docker compose up --build --force-recreate`

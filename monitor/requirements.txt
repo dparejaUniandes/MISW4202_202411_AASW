@@ -1,4 +1,0 @@
-Flask==3.0.0
-SQLAlchemy
-flask-sqlalchemy
-marshmallow_sqlalchemy

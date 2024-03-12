@@ -6,20 +6,31 @@ services:
     container_name: broker
     networks:
       - sport-app-network
-  parametros-salud:
-    build: ./parametros-salud
-    container_name: parametros-salud
+
+  autorizador:
+    build: ./autorizador
+    container_name: autorizador
     volumes:
-      - ./parametros-salud:/app
+      - ./autorizador:/app
     networks:
       - sport-app-network
-  monitor:
-    build: ./monitor
-    container_name: monitor
+
+  usuario: 
+    build: ./usuario
+    container_name: usuario
     volumes:
-      - ./monitor:/app
+      - ./usuario:/app
     networks:
       - sport-app-network
+
+  login:
+    build: ./login
+    container_name: login
+    volumes:
+      - ./login:/app
+    networks:
+      - sport-app-network
+
   api-gateway:
     image: nginx:latest
     container_name: api-gateway
@@ -28,8 +39,9 @@ services:
     volumes:
       - ./nginx/nginx-proxy.conf:/etc/nginx/conf.d/default.conf
     depends_on:
-      - parametros-salud
-      - monitor
+      - autorizador
+      - usuario
+      - login
     networks:
       - sport-app-network
 
