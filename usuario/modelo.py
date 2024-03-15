@@ -29,3 +29,9 @@ class UsuarioSchema(SQLAlchemyAutoSchema):
          model = Usuario
          include_relationships = True
          load_instance = True
+
+class InfoSchema(SQLAlchemyAutoSchema):
+    class Meta:
+         model = InfoDemografica
+         include_relationships = True
+         load_instance = True

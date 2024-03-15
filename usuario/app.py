@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import request
-from modelo import db, Usuario, InfoDemografica, UsuarioSchema, db
+from modelo import db, Usuario, InfoDemografica, UsuarioSchema, db, InfoSchema
 from init_db import init_db
 
 app = Flask(__name__)
@@ -14,6 +14,7 @@ db.create_all()
 init_db()
 
 usuario_schema = UsuarioSchema()
+info_schema = InfoSchema()
 
 @app.route("/", methods=["PUT"])
 def modify_demographic_information():
@@ -21,13 +22,18 @@ def modify_demographic_information():
         return {"msg": "Missing JSON in request"}, 400
 
     username = request.json.get("username", None)
+    usuario = Usuario.query.filter_by(usuario=username).first()
     token = request.json.get("token", None)
-    edad = request.json.get("edad", None)
-    peso = request.json.get("peso", None)
-    estatura = request.json.get("estatura", None)
-    genero = request.json.get("genero", None)
-    pais = request.json.get("pais", None)
-    return "<p>Hello, World! from usuario</p>"
+    usuario.info_demografica.edad = request.json.get("edad", usuario.info_demografica.edad)
+    usuario.info_demografica.peso = request.json.get("peso", usuario.info_demografica.peso)
+    usuario.info_demografica.estatura = request.json.get("estatura", usuario.info_demografica.estatura)
+    usuario.info_demografica.genero = request.json.get("genero", usuario.info_demografica.genero)
+    usuario.info_demografica.idioma = request.json.get("idioma", usuario.info_demografica.idioma)
+    usuario.info_demografica.pais = request.json.get("pais", usuario.info_demografica.pais)
+    db.session.commit()
+
+    infoDemografica = InfoDemografica.query.filter_by(id=usuario.info_demografica.id).first()
+    return info_schema.dump(infoDemografica)
 
 """ Lo que se envia en la peticion desde el cliente
 {
