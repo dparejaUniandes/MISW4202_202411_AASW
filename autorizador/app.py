@@ -1,7 +1,7 @@
 from flask import Flask, request
 from db import connect_to_db, db
 from models import User
-from utils import generate_token, NOT_FOUND_MSG, NOT_AUTHORIZED_MSG, OK_MSG
+from utils import generate_token, NOT_FOUND_MSG, NOT_AUTHORIZED_MSG, OK_MSG, SESION_REMOVED_MSG
 
 app = Flask(__name__)
 connect_to_db(app)
@@ -53,7 +53,9 @@ def generate_user_token():
     return { "msg": OK_MSG, "token": token }, 200
 
 @app.route("/remover-token", methods=["POST"])
-def remove_user_token(username):
+def remove_user_token():
+
+    username = request.json.get("username", None)
 
     if username is None:
         return { "msg": NOT_FOUND_MSG, "estado": False }, 400
@@ -66,7 +68,7 @@ def remove_user_token(username):
     
     db.session.delete(user)
     db.session.commit()
-    return { "msg": OK_MSG, "estado": True }, 200
+    return { "msg": SESION_REMOVED_MSG, "estado": True }, 200
     
 
 if __name__ in "__main__":

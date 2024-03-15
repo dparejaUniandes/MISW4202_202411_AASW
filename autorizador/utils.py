@@ -12,3 +12,4 @@ def generate_token():
 NOT_FOUND_MSG = "Valide los datos de consulta"
 NOT_AUTHORIZED_MSG = "No autorizado"
 OK_MSG = "los datos son correctos"
+SESION_REMOVED_MSG = "Sesión eliminada"
