@@ -45,7 +45,11 @@ def modify_demographic_information():
         infoDemografica = InfoDemografica.query.filter_by(id=usuario.info_demografica.id).first()
         return info_schema.dump(infoDemografica)
     else:
-         return {"msg": NOT_AUTHORIZED_MSG}
+        r = requests.post("http://login:5000/cerrar-sesion", json={
+            "username": username
+        })
+        msg_login = r.json().get("msg", "")
+        return {"msg": NOT_AUTHORIZED_MSG, "msg_login": msg_login}
 
 """ Lo que se envia en la peticion desde el cliente
 {
