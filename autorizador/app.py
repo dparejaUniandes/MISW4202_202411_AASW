@@ -52,7 +52,7 @@ def generate_user_token():
 
     return { "msg": OK_MSG, "token": token }, 200
 
-@app.route("/remove-token", methods=["POST"])
+@app.route("/remover-token", methods=["POST"])
 def remove_user_token(username):
 
     if username is None:
