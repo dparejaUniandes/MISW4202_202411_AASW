@@ -35,7 +35,11 @@ def login():
     if not user:
         return {"msg": "Bad username or password"}, 401
 
-    return {"msg": "login correcto, solicitar token al servicio Autorizador."}
+    r = requests.post("http://autorizador:5000/generar-token", json={
+                "username": username
+            })
+    
+    return {"msg": "login correcto, solicitar token al servicio Autorizador.", "token": r.json().get("token", "")}
 
 @app.route("/cerrar-sesion", methods=["POST"])
 def remove_user_token():
