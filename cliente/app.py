@@ -18,7 +18,6 @@ app = Flask(__name__)
 def hello_world():
     return "<p>Hello, World! from cliente</p>"
 
-
 def simular_modificacion(repeticiones, porcentaje_falla):
     i = 0
     
@@ -39,7 +38,6 @@ def simular_modificacion(repeticiones, porcentaje_falla):
         print(f"Repeticion {i}: {mensaje} : {estado}")
         i += 1
     
-
 @app.route("/iniciar-experimento", methods=["POST"])
 def start_proof_of_concept():
     repeticiones = request.json.get("repeticiones", 100)  # Cantidad de repeticiones predeterminada de 100

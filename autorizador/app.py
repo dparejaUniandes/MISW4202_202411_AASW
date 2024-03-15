@@ -36,7 +36,7 @@ def validar_token():
         return { "msg": NOT_AUTHORIZED_MSG, "estado": False }, 401
 
     if user.token != token:
-        fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+        fecha_hora_actual = datetime.now().strftime('%Y-%m-%d:%H:%M:%S.%f')[:-3]
         logging.info(f"no_autorizado: {fecha_hora_actual}")
         return {"msg": NOT_AUTHORIZED_MSG, "estado": False }, 401
     
@@ -75,11 +75,10 @@ def remove_user_token():
 
     if not user:
         return { "msg": NOT_FOUND_MSG, "estado": False }, 400
-
     
     db.session.delete(user)
     db.session.commit()
-    fecha_hora_actual = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+    fecha_hora_actual = datetime.now().strftime('%Y-%m-%d:%H:%M:%S.%f')[:-3]
     logging.info(f"token_removido: {fecha_hora_actual}")
     return { "msg": SESION_REMOVED_MSG, "estado": True }, 200
     
