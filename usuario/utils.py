@@ -1,0 +1,1 @@
+NOT_AUTHORIZED_MSG = "No autorizado para modificar datos demográficos"

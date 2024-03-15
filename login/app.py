@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request
 from modelos import db, Usuario
+import requests
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
@@ -34,7 +35,22 @@ def login():
     if not user:
         return {"msg": "Bad username or password"}, 401
 
-    return {"msg": "login correcto, solicitar token al servicio Autorizador."}
+    r = requests.post("http://autorizador:5000/generar-token", json={
+                "username": username
+            })
+    
+    return {"msg": "login correcto, solicitar token al servicio Autorizador.", "token": r.json().get("token", "")}
+
+@app.route("/cerrar-sesion", methods=["POST"])
+def remove_user_token():
+
+    username = request.json.get("username", None)
+
+    r = requests.post("http://autorizador:5000/remover-token", json={
+                "username": username
+            })
+    msg = r.json().get("msg", "")
+    return {"msg_autorizador": msg, "msg": "Se revoca la sesión"}
 
 
 if __name__ in "__main__":

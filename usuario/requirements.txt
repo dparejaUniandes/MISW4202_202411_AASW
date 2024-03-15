@@ -1,1 +1,6 @@
 Flask==3.0.0
+SQLAlchemy
+Flask-SQLAlchemy
+marshmallow
+marshmallow-sqlalchemy
+requests==2.31.0
