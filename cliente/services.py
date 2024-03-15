@@ -14,7 +14,7 @@ def login(user: User):
     username=user.username
     password=user.password
     try:
-        r = requests.post("http://login/", json={"username": username, "password": password})
+        r = requests.post("http://login:5000/", json={"username": username, "password": password})
         return r.json().get("token", "")
     except:
         print("Error al conectarse con el servicio de login")
@@ -24,18 +24,27 @@ def update_user(user: User):
     user.update_country(fake.country())
     user.update_genra(fake.random_element(("M", "F")))
     user.update_age(fake.random_int(18, 100))
+    user.update_peso(fake.random_int(50, 100))
+    user.update_estatura(fake.random_int(150, 200))
+    user.update_idioma(fake.random_element(("es", "en")))
 
     edad = user.age
     genero = user.genra
     pais = user.country
+    peso = user.peso
+    estatura = user.estatura
+    idioma = user.idioma
 
     try:
-        r = requests.post("http://usuario/", json={
+        r = requests.put("http://usuario:5000/", json={
                 "username": user.username,
                 "token": user.token,
                 "edad": edad,
                 "genero": genero,
-                "pais": pais
+                "pais": pais,
+                "peso": peso,
+                "estatura": estatura,
+                "idioma": idioma
             })
         return r.json().get("msg", "")
     except:

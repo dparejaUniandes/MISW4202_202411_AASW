@@ -2,10 +2,17 @@ from flask import Flask
 from flask import request
 from modelos import db, Usuario
 import requests
+from init_db import init_db
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
+app_context = app.app_context()
+app_context.push()
+
 db.init_app(app)
+
+db.create_all()
+init_db()
 
 @app.route("/status")
 def hello_world():
