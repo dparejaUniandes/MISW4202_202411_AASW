@@ -15,6 +15,14 @@ services:
     networks:
       - sport-app-network
 
+  cliente:
+    build: ./cliente
+    container_name: cliente
+    volumes:
+      - ./cliente:/app
+    networks:
+      - sport-app-network
+
   usuario:
     build: ./usuario
     container_name: usuario

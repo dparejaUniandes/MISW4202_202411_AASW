@@ -19,17 +19,17 @@ def validar_token():
     token = request.json.get("token", None)
 
     if(username is None or token is None):
-        return { "msg": NOT_FOUND_MSG, "autorizado": False }, 400
+        return { "msg": NOT_FOUND_MSG, "estado": False }, 400
 
     user = db.session.query(User).filter_by(username=username).first()
 
     if not user:
-        return { "msg": NOT_AUTHORIZED_MSG, "autorizado": False }, 401
+        return { "msg": NOT_AUTHORIZED_MSG, "estado": False }, 401
 
     if user.token != token:
-        return {"msg": NOT_AUTHORIZED_MSG, "autorizado": False }, 401
+        return {"msg": NOT_AUTHORIZED_MSG, "estado": False }, 401
     
-    return { "msg": OK_MSG, "autorizado": True }, 200
+    return { "msg": OK_MSG, "estado": True }, 200
 
 @app.route("/generar-token", methods=["POST"])
 def generate_user_token():
@@ -52,6 +52,22 @@ def generate_user_token():
 
     return { "msg": OK_MSG, "token": token }, 200
 
+@app.route("/remove-token", methods=["POST"])
+def remove_user_token(username):
+
+    if username is None:
+        return { "msg": NOT_FOUND_MSG, "estado": False }, 400
+
+    user = db.session.query(User).filter_by(username=username).first()
+
+    if not user:
+        return { "msg": NOT_FOUND_MSG, "estado": False }, 400
+
+    
+    db.session.delete(user)
+    db.session.commit()
+    return { "msg": OK_MSG, "estado": True }, 200
+    
 
 if __name__ in "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
